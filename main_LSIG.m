@@ -2,7 +2,7 @@ clear;
 clf;
 clc;
 close all;
-addpath(genpath("../Library"));
+addpath(genpath("./Library"));
 
 rng(0);
 
