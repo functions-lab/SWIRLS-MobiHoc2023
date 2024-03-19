@@ -2,14 +2,23 @@
 
 ### Step 1: Unzip Data
 
-Unzip `Data.zip` for all the received Wi-Fi packet waveforms with 
+Unzip `Data.zip` for all the received Wi-Fi packet waveforms in 802.11n (high throughput) with 
 
 1. Different low sampling rates $f_s$ and their corresponding carrier frequency distances $\Delta f$;
 2. Different SNR levels.
 
 ### Step 2: Perform SWIRLS
 
-In MATLAB, run `main_LSIG.m` to decode the transmission time bits in `LSIG`, and run `main_HTSIG.m` to decode the MCS/bandwidth/PSDU length bits in `HTSIG`.
+In MATLAB, run `main_LSIG.m` to decode the `LSIG`, including the packet property of
+
+1. Transmission time (12 bits)
+
+In MATLAB, run `main_HTSIG.m` to decode the `LSIG`, including the packet property of
+
+1. Modulation and Coding Scheme (5 bits)
+2. Bandwidth (1 bit)
+3. PSDU Length (16 bits)
+
 
 ## Reference
 
